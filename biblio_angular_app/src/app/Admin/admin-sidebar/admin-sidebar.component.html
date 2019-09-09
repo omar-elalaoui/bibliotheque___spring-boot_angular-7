@@ -1,0 +1,37 @@
+<!-- Sidebar -->
+<ul class="admin_side_bare navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <div class="sidebar-brand-icon rotate-n-15">
+      <i class="fas fa-user-cog"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">Admin</div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
+  <br><br>
+
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <a class="nav-link" routerLink="/adminHome/">
+      <i class="fas fa-home"></i>
+      <span>Accueil</span></a>
+  </li>
+
+  <!-- Nav Item - Charts -->
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link" routerLink="/adminHome/categories" >
+      <i class="fas fa-list"></i>
+      <span>Catégories</span></a>
+  </li>
+  <!-- Nav Item - Tables -->
+  <li class="nav-item" routerLinkActive="active">
+    <a class="nav-link"routerLink="/adminHome/livres">
+      <i class="fas fa-book"></i>
+      <span>Livres</span></a>
+  </li>
+
+</ul>
+<!-- End of Sidebar -->

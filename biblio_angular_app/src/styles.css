@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/alertifyjs/build/css/alertify.min.css";
+@import "../node_modules/alertifyjs/build/css/themes/bootstrap.min.css";
+@import "assets/css/sb-admin-2.min.css";
+
+.hand_cursor{
+  cursor: pointer !important;
+}
+
+.nav_categories {
+  padding: 0 20px;
+}
+
+.input-group-append {
+  height: 34px;
+}
+
+.livre_edit .data span{
+  display: inline-block;
+  width: 90px;
+}
+
+
+/*--Admin sidebar--*/
+.admin_side_bare li.nav-item {
+  height: 40px;
+  padding-left: 15px;
+}
+
+.admin_side_bare li.nav-item span {
+  font-size: 17px !important;
+}
+
+.admin_side_bare li.nav-item i {
+  font-size: 17px !important;
+}
+
+/*--user sidebar--*/
+.user_side_bare .nav-link {
+  padding: 0px 20px 5px !important;
+}
+
+.user_side_bare span.categories {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.user_side_bare .fa-list {
+  color: aliceblue !important;
+}
+
+.user_side_bare .nav_categories li.nav-item:not(.cate) {
+  border-width: 1px 1px 0px 1px;
+  border-color: darkgray;
+  border-style: solid;
+}
+
+.user_side_bare .nav_categories li.nav-item:last-child {
+  border-bottom: 1px darkgray solid;
+}
+
+.user_side_bare .nav_categories a.nav-link {
+  padding: 5px 20px !important;
+}
+
+/*user books_page*/
+.books_page .book-item {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 35px;
+  padding: 20px;
+}
+
+.books_page .book-item:hover {
+  background-color: rgba(0, 0, 0, .1)
+}
+
+.books_page .line b {
+  color: coral;
+  display: inline-block;
+  width: 60px;
+}
+
+.books_page .line {
+  font-size: 13px;
+}
+
+.books_page .disc {
+  margin-top: 10px;
+}
+
+/*user books_details*/
+.book_details b {
+  display: inline-block;
+  width: 70px;
+}
+
+.book_details .book-text {
+  position: relative;
+}
+
+.book_details .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*user books_demandes*/
+.book_demandes .lines {
+  font-size: 14px;
+}
+
+.book_demandes .img {
+  float: left;
+  margin-right: 10px;
+}
+
+.book_demandes .cm_text-right .annuler {
+  margin-top: 20px;
+}
+
+.book_demandes.book_emprunt .dates b {
+  color: coral;
+}
+.book_demandes h5{
+  margin-bottom: 0px !important;
+  color: burlywood;
+}
+
+/*buttons*/
+.btn-xs {
+  padding: .25rem .4rem;
+  font-size: .875rem;
+  line-height: .5;
+  border-radius: .2rem;
+}
+
+/*user profile*/
+.profile .det-item {
+  margin-bottom: 10px;
+}
+
+div.profile-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}

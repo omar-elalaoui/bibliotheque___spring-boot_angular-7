@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f0f8d76-51c5-42b4-9c94-e0ca42f5ddbc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/2-Biblioteque_angular+spring boot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-book-form/admin-book-form.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-book-form/admin-book-form.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-book-form/admin-book-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-book-item/admin-book-item.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-book-item/admin-book-item.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-book-list/admin-book-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-book-list/admin-book-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-category-form/admin-category-form.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-category-form/admin-category-form.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-category-list/admin-category-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-category-list/admin-category-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-dashboard/admin-dashboard.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-dashboard/admin-dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-dashboard/admin-dashboard.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-dashboard/admin-dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-header/admin-header.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-header/admin-header.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-home/admin-home.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-home/admin-home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-home/admin-home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-sidebar/admin-sidebar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/Admin/admin-sidebar/admin-sidebar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/_services/alertify.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_angular_app/src/assets/css/sb-admin-2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/Dao/BookRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/Dao/CategoryRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/Entity/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/Entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/Entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/Entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/AuthenticationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JWTWebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtAuthenticationRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtInMemoryUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtTokenAuthorizationOncePerRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtTokenRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtTokenResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtUnAuthorizedResponseAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblio_spring_app/src/main/java/com/practice/biblio/jwt/JwtUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_angular_app/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/src/main/java/com/practice/ecom/EcomApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomm_spring_app/src/test/java/com/practice/ecom/EcomApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1QItu2cPfoq7m1iqAbvLRC5cXPM" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f0f8d76-51c5-42b4-9c94-e0ca42f5ddbc" name="Default Changelist" comment="" />
+      <created>1567470156689</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567470156689</updated>
+      <workItem from="1567470159762" duration="91000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
