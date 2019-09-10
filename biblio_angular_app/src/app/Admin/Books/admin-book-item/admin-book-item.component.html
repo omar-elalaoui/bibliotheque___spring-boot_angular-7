@@ -1,0 +1,17 @@
+<div class="book-item">
+  <hr>
+  <div class="ml-4">
+    <div class="img"><img src="{{bookService.myApiUrl+'getPic/'+book.id}}" height="100px" width="80px" alt=""></div>
+    <div class="cm_text-right">
+      <h5>{{book.titre}}</h5>
+      <div class="lines">
+        <b>By </b> <span>{{book.auteur}}</span><br>
+        <b>Edition </b> <span>{{book.edition}}</span><br>
+        <div class="btns mt-2">
+          <button class="btn-xs btn btn-primary mr-1"><i class="fas fa-edit"></i> Modifier</button>
+          <button class="btn-xs btn btn-danger"><i class="fas fa-trash"></i> Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

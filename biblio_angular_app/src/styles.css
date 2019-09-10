@@ -4,7 +4,8 @@
 @import "../node_modules/alertifyjs/build/css/themes/bootstrap.min.css";
 @import "assets/css/sb-admin-2.min.css";
 
-.hand_cursor{
+
+.hand_cursor, tbody i{
   cursor: pointer !important;
 }
 

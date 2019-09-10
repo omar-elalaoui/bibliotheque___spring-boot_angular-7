@@ -1,0 +1,35 @@
+
+<div class="container-fluid">
+<br>
+<div class="row">
+  <div class="col-10 offset-1 profile-card book_demandes mb-4">
+
+    <div class="row">
+      <div class="col-3">
+        <a routerLink="/adminHome/livres/form" class="btn btn-primary btn-sm">
+          <i class="fas fa-plus"></i>
+          <b> Ajouter un livre</b>
+        </a>
+      </div>
+      <div class="col-5">Catégorei: </div>
+      <!-- Topbar Search -->
+      <form class=" form-inline  navbar-search">
+        <div class="input-group">
+          <input type="text" class="form-control bg-light border-0 small" placeholder="Chercher un live..." aria-label="Search" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-search fa-sm"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <br>
+
+    <div *ngFor="let book of books._embedded.books">
+      <app-admin-book-item [book]="book"></app-admin-book-item>
+    </div>
+    <hr>
+  </div>
+</div>
+</div>

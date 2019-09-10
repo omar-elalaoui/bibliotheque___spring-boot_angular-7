@@ -20,6 +20,7 @@ public class Book {
     private int pages;
     private long isbn;
     private String photo;
+    private String description;
     @ManyToOne
     private Category category;
 }

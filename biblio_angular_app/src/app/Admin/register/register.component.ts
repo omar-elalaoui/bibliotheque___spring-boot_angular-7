@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../../_model/user';
+import {User} from '../../_models/user';
 import {AuthService} from '../../_services/auth.service';
-import {Student} from '../../_model/student';
+import {Student} from '../../_models/student';
 import {AlertifyService} from '../../_services/alertify.service';
 
 @Component({

@@ -7,21 +7,21 @@
       <h4>CATEGORIES</h4>
       <br><br>
 
-      <form class="form-inline col-6 offset-3" action="/action_page.php">
+      <form class="form-inline col-6 offset-3" #f="ngForm" (ngSubmit)="saveCategory()">
 
         <label for="cate">Nom: </label>
-        <input type="text" class="form-control ml-3" id="cate">
+        <input type="text" name="nom" [(ngModel)]="category.nom" class="form-control ml-3" id="cate" required="">
 
         <div>
           <br>
-          <button class="btn btn-success btn-sm mr-2">
+          <button class="btn btn-success btn-sm mr-2" type="submit" [disabled]="!f.valid">
             <i class="fas fa-save"></i>
             Enregister
           </button>
-          <a href="categories.html" class="btn btn-info btn-sm">
+          <button routerLink="/adminHome/categories" class="btn btn-info btn-sm">
             <i class="fas fa-times"></i>
             Annuler
-          </a>
+          </button>
         </div>
       </form>
 
@@ -29,3 +29,4 @@
   </div>
 
 </div>
+

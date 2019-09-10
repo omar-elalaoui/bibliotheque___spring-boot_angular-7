@@ -8,9 +8,9 @@
     <br>
     <div class="row">
       <div class="col-3">
-        <a routerLink="/categories/form" class="btn btn-primary btn-sm">
+        <a routerLink="/adminHome/categories/add" class="btn btn-primary btn-sm">
           <i class="fas fa-plus"></i>
-          <b>Ajouter catégorie</b>
+          <b> Ajouter catégorie</b>
         </a>
       </div>
       <div class="col-5"></div>
@@ -38,28 +38,14 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
+      <tr *ngFor="let category of categories?._embedded.categories">
+        <td>{{category.nom}}</td>
+        <td>{{category.date_creation | date: 'dd/MM/yyyy'}}</td>
         <td class="text-center">
-          <i class="fas fa-trash text-danger"></i>
-          &ensp;|&ensp;
-          <i class="fas fa-edit text-primary"></i>
+          <i class="fas fa-trash text-danger" (click)="deleteCategory(category.id)"></i>
+          &ensp;<span class="mx-3"> | </span>&ensp;
+          <i class="fas fa-edit text-primary" [routerLink]="['/adminHome/categories/edit', category?.id]"></i>
         </td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td class="text-center"><i class="fas fa-trash text-danger"></i>
-          &ensp;|&ensp;
-          <i class="fas fa-edit text-primary"></i></td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td class="text-center"><i class="fas fa-trash text-danger"></i>
-          &ensp;|&ensp;
-          <i class="fas fa-edit text-primary"></i></td>
       </tr>
       </tbody>
     </table>

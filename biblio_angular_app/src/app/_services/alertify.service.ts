@@ -7,10 +7,10 @@ export class AlertifyService {
 
   constructor() { }
 
-  confirm(msg: string, func: () => {}){
+  confirm(header: string, msg: string, func: () => void){
     alertify.confirm(msg, function(e){
-      if(e) { func(); }else{}
-    });
+      if(e) { func(); }
+    }).setHeader(header);
   }
 
   success(msg: string){
