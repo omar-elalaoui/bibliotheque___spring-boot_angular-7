@@ -1,3 +1,5 @@
+import {Category} from './category';
+
 export class Book {
   id: number;
   titre: string;
@@ -7,4 +9,5 @@ export class Book {
   isbn: number;
   photo: string;
   description: string;
+  category: Category;
 }

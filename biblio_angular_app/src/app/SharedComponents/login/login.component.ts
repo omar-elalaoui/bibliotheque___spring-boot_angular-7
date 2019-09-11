@@ -10,14 +10,18 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   model:any = {};
+  isLoading=false;
   constructor(private auth: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   login(){
+    this.isLoading=true;
     this.auth.login(this.model).subscribe(next => {
+      this.isLoading=false;
       this.alertify.success("Connecté avec succès");
       this.router.navigate(['/adminHome']);
     }, error => {
-      this.alertify.error("Nom d'utilisateur ou mot de passe incorrect")
+      this.isLoading=false;
+      this.alertify.error("Nom d'utilisateur ou mot de passe incorrect");
     })
   }
   loggedIn(){

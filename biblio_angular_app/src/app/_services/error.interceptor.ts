@@ -10,7 +10,7 @@ export class ErrorInterceptor implements HttpInterceptor {
             catchError(error => {
                 if (error instanceof HttpErrorResponse) {
                   console.log(error);
-                        return throwError(error.error.message);
+                  return throwError(error.error.message);
                 }
             })
         );

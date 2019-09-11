@@ -16,12 +16,18 @@
 .input-group-append {
   height: 34px;
 }
-
+.sidebar{
+  height: 100% !important;
+}
 .livre_edit .data span{
   display: inline-block;
   width: 90px;
 }
 
+.book_details strong {
+  display: inline-block;
+  width: 85px;
+}
 
 /*--Admin sidebar--*/
 .admin_side_bare li.nav-item {

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
-import {Observable} from 'rxjs';
 import {Category} from '../_models/category';
 
 @Injectable({
@@ -19,6 +18,10 @@ export class CategoryService {
 
   getCategory(id: number){
     return this.http.get(this.springDataUrl+id);
+  }
+
+  getCategoryBooks(id: number){
+    return this.http.get(this.springDataUrl+id+"/bookList");
   }
 
   saveCategory(category: Category){

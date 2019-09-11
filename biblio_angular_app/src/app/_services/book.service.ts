@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient, HttpHeaders, HttpRequest} from '@angular/common/http';
 import {Book} from '../_models/book';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {Category} from '../_models/category';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +19,12 @@ export class BookService {
     return this.http.get(this.springDataUrl)
   }
 
-  getBook(id: number){
-    return this.http.get(this.springDataUrl+id);
+  getBook(id: number): Observable<Book>{
+    return this.http.get<Book>(this.springDataUrl+id)
+  }
+
+  getBookCategory(id: number): Observable<Category>{
+    return this.http.get<Category>(this.springDataUrl+id+"/category")
   }
 
   saveOrUpdateBook(file: File, book: Book){

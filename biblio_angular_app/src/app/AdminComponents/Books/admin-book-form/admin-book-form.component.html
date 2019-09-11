@@ -19,13 +19,10 @@
           <form class="form-inline" (ngSubmit)="saveBook()" #f="ngForm">
 
             <input #uploader type="file" id="imgInp" hidden (change)="displayAndAssignImg($event)">
-
             <div>
               <span class="mr-sm-2">Catégorei:</span>
               <select name="" id="" class="form-control mb-2 pr-5" >
-                <option value="">Programmation</option>
-                <option value="">cat2</option>
-                <option value="">cat3</option>
+                <option *ngFor="let category of categories._embedded.categories" value="{{category.id}}">{{category.nom}}</option>
               </select>
             </div>
 
@@ -77,3 +74,4 @@
   </div>
   <!-- /.container-fluid -->
 </div>
+<br>

@@ -11,7 +11,16 @@
           <b> Ajouter un livre</b>
         </a>
       </div>
-      <div class="col-5">Catégorei: </div>
+      <div class="col-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+        <select name="categories" #c class="form-control" (change)="loadCategoryBooks(c.value)">
+          <option value="-1" disabled>Catégorie...</option>
+          <option value="0">TOUTES</option>
+          <option *ngFor="let category of categories._embedded.categories" value="{{category.id}}">{{category.nom}}</option>
+        </select>
+        </div>
+      </div>
       <!-- Topbar Search -->
       <form class=" form-inline  navbar-search">
         <div class="input-group">

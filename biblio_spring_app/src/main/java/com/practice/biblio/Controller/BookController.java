@@ -17,7 +17,6 @@ public class BookController {
     @PostMapping("/books")
     public void add(@RequestParam("book") String bookString, @RequestParam("image") MultipartFile image) throws Exception {
         Book book= new ObjectMapper().readValue(bookString, Book.class);
-        if(image.isEmpty()) throw new RuntimeException("Image n'est pas choisi");
         bookService.save(book, image);
     }
     

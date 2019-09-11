@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         AppUser appUser=accountService.loadUserByUsername(username);
-        if(appUser==null) throw new UsernameNotFoundException("invalid user");
+        if(appUser==null || !appUser.isActived()) throw new UsernameNotFoundException("invalid user");
         Collection<GrantedAuthority> authorities=new ArrayList<>();
         appUser.getRoleList().forEach(r->{
             authorities.add(new SimpleGrantedAuthority(r.getRoleName()));
