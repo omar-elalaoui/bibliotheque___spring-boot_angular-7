@@ -5,51 +5,62 @@
 
     <div class="row">
       <div class="col-4 pt-4 pl-4">
-        <img src="../img/book1.png" alt="user_image" id="book_img" height="200px">
-        <button class="img_upload_btn mt-1 btn btn-primary btn-sm">
-          <i class="fas fa-upload"></i> upload ...</button>
+        <img [src]="localFileUrl" id="book_img" height="200px" width="162px"><br>
+        <div>
+          <button (click)="uploader.click()" class="img_upload_btn mt-2 ml-3 btn btn-primary btn-sm">
+            <i class="fas fa-upload"></i> Choisir image...
+
+          </button>
+        </div>
       </div>
       <div class="col-8">
         <br>
         <div class="data">
-          <form class="form-inline" action="">
+          <form class="form-inline" (ngSubmit)="saveBook()" #f="ngForm">
 
-            <input type="file" id="imgInp" hidden>
+            <input #uploader type="file" id="imgInp" hidden (change)="displayAndAssignImg($event)">
+
+            <div>
+              <span class="mr-sm-2">Catégorei:</span>
+              <select name="" id="" class="form-control mb-2 pr-5" >
+                <option value="">Programmation</option>
+                <option value="">cat2</option>
+                <option value="">cat3</option>
+              </select>
+            </div>
 
             <div>
               <span class="mr-sm-2">Titre:</span>
-              <input type="text" class="form-control mb-2 mr-sm-2">
+              <input type="text" [(ngModel)]="book.titre" name="titre" required class="form-control mb-2 mr-sm-2">
             </div>
 
             <div>
               <span class="mr-sm-2"> Auteur:</span>
-              <input type="text" class="form-control mb-2 mr-sm-2">
+              <input type="text" [(ngModel)]="book.auteur" name="auteur" required class="form-control mb-2 mr-sm-2">
             </div>
 
             <div>
               <span class="mr-sm-2">Edition:</span>
-              <input type="text" class="form-control mb-2 mr-sm-2">
+              <input type="text" [(ngModel)]="book.edition" name="edition" required class="form-control mb-2 mr-sm-2">
             </div>
 
             <div>
               <span class="mr-sm-2">ISBN:</span>
-              <input type="text" class="form-control mb-2 mr-sm-2">
+              <input type="text" [(ngModel)]="book.isbn" name="isbn" required class="form-control mb-2 mr-sm-2">
             </div>
             <div>
               <span class="mr-sm-2">Pages:</span>
-              <input type="text" class="form-control mb-2 mr-sm-2">
+              <input type="text" [(ngModel)]="book.pages" name="pages" required class="form-control mb-2 mr-sm-2">
             </div>
             <div>
               <span class="mr-sm-2">Description:</span>
-              <textarea name="" cols="30" rows="3" class="form-control mt-2 mb-2 mr-sm-2"></textarea>
+              <textarea name="" [(ngModel)]="book.description" name="description" required cols="30" rows="3" class="form-control mt-2 mb-2 mr-sm-2"></textarea>
             </div>
-
-
 
             <div class="footer">
               <br>
               &ensp;
-              <button type="submit" class="btn btn-success mr-2">
+              <button type="submit" class="btn btn-success mr-2" [disabled]="!f.valid">
                 <i class="fas fa-save"></i>
                 Enregister
               </button>
