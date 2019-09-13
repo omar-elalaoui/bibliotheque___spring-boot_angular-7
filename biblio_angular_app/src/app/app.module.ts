@@ -14,18 +14,20 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { LoginComponent } from './SharedComponents/login/login.component';
 import { RegisterComponent } from './UserComponents/register/register.component';
 import {FormsModule} from '@angular/forms';
-import {AuthService} from './_services/auth.service';
-import {AlertifyService} from './_services/alertify.service';
+import {AuthService} from './services/auth.service';
+import {AlertifyService} from './services/alertify.service';
 import {HttpClientModule} from '@angular/common/http';
-import {ErrorInterceptorProvider} from './_services/error.interceptor';
-import {AuthGuard} from './_guards/auth.guard';
+import {ErrorInterceptorProvider} from './services/error.interceptor';
+import {AuthGuard} from './guards/auth.guard';
 import {JwtModule} from '@auth0/angular-jwt';
-import {CategoryService} from './_services/category.service';
-import {BookService} from './_services/book.service';
+import {CategoryService} from './services/category.service';
+import {BookService} from './services/book.service';
 import { AdminCategoryEditComponent } from './AdminComponents/categories/admin-category-edit/admin-category-edit.component';
 import { AdminCategoryAddComponent } from './AdminComponents/categories/admin-category-add/admin-category-add.component';
 import { BookDetailsComponent } from './SharedComponents/book-details/book-details.component';
 import {AdminDashboardComponent} from './AdminComponents/admin-dashboard/admin-dashboard.component';
+import { AdminUserListComponent } from './AdminComponents/users/admin-user-list/admin-user-list.component';
+import { AdminUserProfileComponent } from './AdminComponents/users/admin-user-profile/admin-user-profile.component';
 
 export function tokenGetter(){
    return localStorage.getItem("token");
@@ -46,7 +48,9 @@ export function tokenGetter(){
     RegisterComponent,
     AdminCategoryEditComponent,
     AdminCategoryAddComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    AdminUserListComponent,
+    AdminUserProfileComponent
   ],
   imports: [
     BrowserModule,

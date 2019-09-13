@@ -19,6 +19,6 @@ public class AppUser {
     private boolean actived;
     @ManyToMany(fetch = FetchType.EAGER)
     private List<AppRole> roleList;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Student student;
 }

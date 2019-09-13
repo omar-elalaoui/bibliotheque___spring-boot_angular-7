@@ -13,7 +13,7 @@ public class CategoryServiceImpl implements CategoryService {
     
     @Override
     public void save(Category category) {
-        if(categoryRepo.findByNom(category.getNom())!= null) throw new RuntimeException("catégorie existe déja");
+        if(category.getId() == 0 && categoryRepo.findByNom(category.getNom())!= null) throw new RuntimeException("catégorie existe déja");
         categoryRepo.save(category);
     }
 }

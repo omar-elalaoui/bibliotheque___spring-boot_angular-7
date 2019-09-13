@@ -22,7 +22,7 @@ public class AccountserviceImpl implements AccountService {
     @Autowired
     private AppRoleRepo appRoleRepo;
     @Override
-    public AppUser saveUser(AppUser _user) {
+    public void saveUser(AppUser _user) {
         AppUser user=appUserRepo.findByUsername(_user.getUsername());
         if(user!=null) throw new RuntimeException("Utilisateur existe déjà");
         _user.setActived(true);
@@ -31,7 +31,11 @@ public class AccountserviceImpl implements AccountService {
         roleList.add(appRoleRepo.findByRoleName("USER"));
         _user.setRoleList(roleList);
         appUserRepo.save(_user);
-        return _user;
+    }
+    
+    @Override
+    public void updateUser(AppUser _user) {
+        appUserRepo.save(_user);
     }
     
     @Override

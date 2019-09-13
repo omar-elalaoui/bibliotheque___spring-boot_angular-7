@@ -6,11 +6,13 @@ import {AdminBookFormComponent} from './AdminComponents/Books/admin-book-form/ad
 import {LoginComponent} from './SharedComponents/login/login.component';
 import {RegisterComponent} from './UserComponents/register/register.component';
 import {AdminHomeComponent} from './AdminComponents/admin-home/admin-home.component';
-import {AuthGuard} from './_guards/auth.guard';
+import {AuthGuard} from './guards/auth.guard';
 import {AdminCategoryEditComponent} from './AdminComponents/categories/admin-category-edit/admin-category-edit.component';
 import {AdminCategoryAddComponent} from './AdminComponents/categories/admin-category-add/admin-category-add.component';
 import {AdminDashboardComponent} from './AdminComponents/admin-dashboard/admin-dashboard.component';
 import {BookDetailsComponent} from './SharedComponents/book-details/book-details.component';
+import {AdminUserListComponent} from './AdminComponents/users/admin-user-list/admin-user-list.component';
+import {AdminUserProfileComponent} from './AdminComponents/users/admin-user-profile/admin-user-profile.component';
 
 const appRoutes:Routes= [
   {path: 'login', component: LoginComponent},
@@ -22,7 +24,10 @@ const appRoutes:Routes= [
       {path: 'categories/edit/:id', component: AdminCategoryEditComponent},
       {path: 'livres', component: AdminBookListComponent},
       {path: 'livres/form', component: AdminBookFormComponent},
-      {path: 'livres/:id/details', component: BookDetailsComponent}
+      {path: 'livres/:id/details', component: BookDetailsComponent},
+      {path: 'livres/:id/edit', component: AdminBookFormComponent},
+      {path: 'users', component: AdminUserListComponent},
+      {path: 'users/:id/profile', component: AdminUserProfileComponent}
     ]},
   {path: '**', redirectTo: 'adminHome', pathMatch: 'full'}
 ];

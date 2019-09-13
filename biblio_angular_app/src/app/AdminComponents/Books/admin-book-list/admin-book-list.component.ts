@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {BookService} from '../../../_services/book.service';
-import {AlertifyService} from '../../../_services/alertify.service';
-import {CategoryService} from '../../../_services/category.service';
+import {BookService} from '../../../services/book.service';
+import {AlertifyService} from '../../../services/alertify.service';
+import {CategoryService} from '../../../services/category.service';
+import {Book} from '../../../models/book';
+import {Category} from '../../../models/category';
 
 @Component({
   selector: 'app-admin-book-list',
@@ -9,8 +11,8 @@ import {CategoryService} from '../../../_services/category.service';
   styleUrls: ['./admin-book-list.component.css']
 })
 export class AdminBookListComponent implements OnInit {
-  books;
-  categories;
+  books: Book[];
+  categories: Category[];
   constructor(private bookService: BookService, private alertify: AlertifyService, private categoryService: CategoryService) { }
 
   ngOnInit() {
@@ -34,7 +36,7 @@ export class AdminBookListComponent implements OnInit {
 
   loadCategoryBooks(categoryId) {
     if(categoryId == 0){
-      this.loadCategories();
+      this.loadBooks();
     }else{
       this.categoryService.getCategoryBooks(categoryId).subscribe(
         books =>{

@@ -17,7 +17,7 @@
         <select name="categories" #c class="form-control" (change)="loadCategoryBooks(c.value)">
           <option value="-1" disabled>Catégorie...</option>
           <option value="0">TOUTES</option>
-          <option *ngFor="let category of categories._embedded.categories" value="{{category.id}}">{{category.nom}}</option>
+          <option *ngFor="let category of categories" value="{{category.id}}">{{category.nom}}</option>
         </select>
         </div>
       </div>
@@ -35,7 +35,7 @@
     </div>
     <br>
 
-    <div *ngFor="let book of books._embedded.books">
+    <div *ngFor="let book of books">
       <app-admin-book-item [book]="book"></app-admin-book-item>
     </div>
     <hr>

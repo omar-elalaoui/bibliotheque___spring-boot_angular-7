@@ -1,0 +1,51 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <br>
+  <div class="row">
+    <div class="col-10 offset-1 profile-card">
+      <div class="row">
+        <div class="col-3 pt-2"><h4>UTILISATEURS</h4></div>
+        <div class="col-5"></div>
+        <!-- Topbar Search -->
+        <form class=" form-inline  navbar-search">
+          <div class="input-group">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <p></p>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Utilisateur</th>
+          <th>Email</th>
+          <th class="text-center" width="20%">Block</th>
+          <th class="text-center" width="20%">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr [ngClass]="{'block': !user.actived}" *ngFor="let user of users">
+          <td>{{user.student.prenom}} {{user.student.nom}}</td>
+          <td>{{user.student.email}}</td>
+          <td class="text-center">
+            <button *ngIf="!user.actived" (click)="toggleblock(user)" class="btn btn-xs btn-warning"><i class="fas fa-unlock-alt"></i> Unblock</button>
+            <button *ngIf="user.actived" (click)="toggleblock(user)" class="btn btn-xs btn-danger"><i class="fas fa-ban"></i> Block</button>
+          </td>
+          <td class="text-center">
+            <a routerLink="/adminHome/users/{{user.id}}/profile"><i class="fas fa-user text-success"></i></a>
+            <span class="px-3">|</span>
+            <i class="fas fa-trash text-danger"></i>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->

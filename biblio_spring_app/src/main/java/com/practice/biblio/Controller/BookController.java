@@ -20,10 +20,6 @@ public class BookController {
         bookService.save(book, image);
     }
     
-//    @PutMapping("/books")
-//    public void update(@RequestBody Book book){
-//        bookService.save(book);
-//    }
     
     @GetMapping(path = "/books/{id}/getPic", produces = MediaType.IMAGE_JPEG_VALUE)
     @ResponseBody

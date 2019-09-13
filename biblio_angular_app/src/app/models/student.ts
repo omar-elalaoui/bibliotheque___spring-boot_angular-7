@@ -6,4 +6,5 @@ export class Student {
   telephone :string ;
   cin :string ;
   cne :number ;
+  photo:string;
 }

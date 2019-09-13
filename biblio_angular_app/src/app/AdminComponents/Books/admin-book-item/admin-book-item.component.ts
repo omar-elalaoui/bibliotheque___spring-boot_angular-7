@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {AlertifyService} from '../../../_services/alertify.service';
-import {BookService} from '../../../_services/book.service';
+import {AlertifyService} from '../../../services/alertify.service';
+import {BookService} from '../../../services/book.service';
 
 @Component({
   selector: 'app-admin-book-item',

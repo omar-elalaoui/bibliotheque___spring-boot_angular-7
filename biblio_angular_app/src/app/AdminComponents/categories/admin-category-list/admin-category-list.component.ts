@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoryService} from '../../../_services/category.service';
-import {AlertifyService} from '../../../_services/alertify.service';
+import {CategoryService} from '../../../services/category.service';
+import {AlertifyService} from '../../../services/alertify.service';
+import {Category} from '../../../models/category';
 
 @Component({
   selector: 'app-admin-category-list',
@@ -8,7 +9,7 @@ import {AlertifyService} from '../../../_services/alertify.service';
   styleUrls: ['./admin-category-list.component.css']
 })
 export class AdminCategoryListComponent implements OnInit {
-  categories;
+  categories: Category[];
   constructor(private categoryService: CategoryService, private alertify: AlertifyService) { }
 
   ngOnInit() {

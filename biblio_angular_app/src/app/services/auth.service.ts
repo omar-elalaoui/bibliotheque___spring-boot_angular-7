@@ -27,7 +27,7 @@ export class AuthService {
   }
 
   register(model: any){
-    return this.http.post(this.urlApi + "register", model);
+    return this.http.post(this.urlApi + "api/register", model);
   }
 
 }

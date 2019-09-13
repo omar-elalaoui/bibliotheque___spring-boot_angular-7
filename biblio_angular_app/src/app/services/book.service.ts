@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient, HttpHeaders, HttpRequest} from '@angular/common/http';
-import {Book} from '../_models/book';
+import {Book} from '../models/book';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {Category} from '../_models/category';
+import {Category} from '../models/category';
 
 @Injectable({
   providedIn: 'root'
@@ -15,12 +15,18 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
 
-  getBooks(){
-    return this.http.get(this.springDataUrl)
+  getBooks(): Observable<Book[]>{
+    return this.http.get<Book[]>(this.springDataUrl).pipe(
+      map(data => { const temp: any= data; return temp._embedded.books; })
+    )
   }
 
   getBook(id: number): Observable<Book>{
     return this.http.get<Book>(this.springDataUrl+id)
+  }
+
+  getBookImage(id: number): Observable<Blob>{
+    return this.http.get(this.myApiUrl+id+'/getPic', {responseType: "blob"})
   }
 
   getBookCategory(id: number): Observable<Category>{
@@ -31,7 +37,7 @@ export class BookService {
     let formdata: FormData = new FormData();
     formdata.append('image', file);
     formdata.append("book", JSON.stringify(book) );
-    const req = new HttpRequest('POST', environment.apiUrl + "api/books", formdata, {
+    const req = new HttpRequest('POST', this.myApiUrl, formdata, {
       reportProgress: true,
       responseType: 'text',
       headers: new HttpHeaders({'Authorization': "Bearer "+localStorage.getItem("token")})

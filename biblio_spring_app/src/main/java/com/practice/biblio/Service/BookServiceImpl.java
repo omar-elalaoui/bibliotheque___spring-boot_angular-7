@@ -24,7 +24,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public void save(Book book, MultipartFile pic) throws Exception{
         Book foundBook= bookRepo.findByTitre(book.getTitre());
-        if(foundBook != null && foundBook.getEdition() == book.getEdition()) throw new RuntimeException("Livre existe déja");
+        if(book.getId() == 0 && foundBook != null && foundBook.getEdition() == book.getEdition()) throw new RuntimeException("Livre existe déja");
         File bookDir= new File(booksDir);
         if(!bookDir.exists()) bookDir.mkdir();
         book.setPhoto(pic.getOriginalFilename());
@@ -37,6 +37,4 @@ public class BookServiceImpl implements BookService {
         String ff= booksDir+"/"+id+".jpg";
         return Files.readAllBytes(Paths.get(booksDir+"/"+id+".jpg"));
     }
-    
-    
 }

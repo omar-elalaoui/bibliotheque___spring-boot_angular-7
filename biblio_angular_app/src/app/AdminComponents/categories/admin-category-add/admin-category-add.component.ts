@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Category} from '../../../_models/category';
-import {CategoryService} from '../../../_services/category.service';
+import {Category} from '../../../models/category';
+import {CategoryService} from '../../../services/category.service';
 import {Router} from '@angular/router';
-import {AlertifyService} from '../../../_services/alertify.service';
+import {AlertifyService} from '../../../services/alertify.service';
 
 @Component({
   selector: 'app-admin-category-add',

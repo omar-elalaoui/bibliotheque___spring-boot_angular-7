@@ -38,7 +38,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let category of categories?._embedded.categories">
+      <tr *ngFor="let category of categories">
         <td>{{category.nom}}</td>
         <td>{{category.date_creation | date: 'dd/MM/yyyy'}}</td>
         <td class="text-center">

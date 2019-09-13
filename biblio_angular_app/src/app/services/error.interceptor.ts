@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import {AlertifyService} from './alertify.service';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
@@ -10,7 +11,7 @@ export class ErrorInterceptor implements HttpInterceptor {
             catchError(error => {
                 if (error instanceof HttpErrorResponse) {
                   console.log(error);
-                  return throwError(error.error.message);
+                  return throwError(JSON.parse(error.error).message);
                 }
             })
         );
