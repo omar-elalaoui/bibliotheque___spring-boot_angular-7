@@ -74,6 +74,7 @@
 
 /*user books_page*/
 .books_page .book-item {
+  width: 210px;
   display: inline-block;
   cursor: pointer;
   margin-bottom: 35px;
@@ -82,12 +83,6 @@
 
 .books_page .book-item:hover {
   background-color: rgba(0, 0, 0, .1)
-}
-
-.books_page .line b {
-  color: coral;
-  display: inline-block;
-  width: 60px;
 }
 
 .books_page .line {

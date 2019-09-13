@@ -1,0 +1,15 @@
+
+  <div class="book-item" routerLink="/userHome/livres/{{book.id}}">
+    <img src="{{bookService.myApiUrl+book.id+'/getPic'}}"  height="220" width="170">
+    <div class="disc">
+      <h6>{{book.titre}}</h6>
+      <div class="line">
+        <strong class="left">auteur</strong>
+        <span class="right">{{book.auteur}}</span>
+      </div>
+      <div class="line">
+        <strong class="left">Edition</strong>
+        <span class="right">{{book.edition}}</span>
+      </div>
+    </div>
+  </div>

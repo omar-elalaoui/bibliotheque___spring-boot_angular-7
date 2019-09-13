@@ -1,0 +1,34 @@
+<!-- Sidebar -->
+<ul class="user_side_bare navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="/userHome">
+    <div class="sidebar-brand-icon rotate-n-15">
+      <i class="fas fa-book-open"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">bibliothèque</div>
+  </a>
+  <!-- Nav Item - Dashboard -->
+  <div class="nav_categories">
+    <li class="nav-item cate">
+      <a class="nav-link">
+        <br>
+        <i class="fas fa-list"></i>
+        <span class="categories">Catégories</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    <li class="nav-item"  routerLinkActive="activeS" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link" routerLink="/userHome">
+        <span>Toutes</span></a>
+    </li>
+    <li class="nav-item" *ngFor="let category of categories" routerLinkActive="activeS">
+      <a class="nav-link" routerLink="/userHome/categories/{{category.id}}/bookList">
+        <span>{{category.nom}}</span></a>
+    </li>
+  </div>
+
+</ul>
+<!-- End of Sidebar -->

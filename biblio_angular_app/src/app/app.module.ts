@@ -28,6 +28,18 @@ import { BookDetailsComponent } from './SharedComponents/book-details/book-detai
 import {AdminDashboardComponent} from './AdminComponents/admin-dashboard/admin-dashboard.component';
 import { AdminUserListComponent } from './AdminComponents/users/admin-user-list/admin-user-list.component';
 import { AdminUserProfileComponent } from './AdminComponents/users/admin-user-profile/admin-user-profile.component';
+import { UserHomeComponent } from './UserComponents/home/user-home.component';
+import { UserSidebarComponent } from './UserComponents/home/user-sidebar/user-sidebar.component';
+import { UserHeaderComponent } from './UserComponents/home/user-header/user-header.component';
+import { UserBookListComponent } from './UserComponents/book/user-book-list/user-book-list.component';
+import { UserBookDetailsComponent } from './UserComponents/book/user-book-details/user-book-details.component';
+import { UserProfileComponent } from './UserComponents/profile/user-profile/user-profile.component';
+import { UserBookItemComponent } from './UserComponents/book/user-book-item/user-book-item.component';
+import { UserDemandeListComponent } from './UserComponents/demande/user-demande-list/user-demande-list.component';
+import { UserDemandeItemComponent } from './UserComponents/demande/user-demande-item/user-demande-item.component';
+import { UserEmpruntListComponent } from './UserComponents/emprunt/user-emprunt-list/user-emprunt-list.component';
+import { UserEmpruntItemComponent } from './UserComponents/emprunt/user-emprunt-item/user-emprunt-item.component';
+import { UserProfileEditComponent } from './UserComponents/profile/user-profile-edit/user-profile-edit.component';
 
 export function tokenGetter(){
    return localStorage.getItem("token");
@@ -50,7 +62,19 @@ export function tokenGetter(){
     AdminCategoryAddComponent,
     BookDetailsComponent,
     AdminUserListComponent,
-    AdminUserProfileComponent
+    AdminUserProfileComponent,
+    UserHomeComponent,
+    UserSidebarComponent,
+    UserHeaderComponent,
+    UserBookListComponent,
+    UserBookDetailsComponent,
+    UserProfileComponent,
+    UserBookItemComponent,
+    UserDemandeListComponent,
+    UserDemandeItemComponent,
+    UserEmpruntListComponent,
+    UserEmpruntItemComponent,
+    UserProfileEditComponent
   ],
   imports: [
     BrowserModule,
