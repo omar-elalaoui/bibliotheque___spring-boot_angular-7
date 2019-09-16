@@ -1,7 +1,6 @@
 package com.practice.biblio;
 
-import com.practice.biblio.Entity.Book;
-import com.practice.biblio.Entity.Category;
+import com.practice.biblio.Entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -24,6 +23,6 @@ public class BiblioApplication implements CommandLineRunner {
     }
     @Override
     public void run(String... args) throws Exception {
-        repositoryRestConfiguration.exposeIdsFor(Category.class, Book.class);
+        repositoryRestConfiguration.exposeIdsFor(Category.class, Book.class, Emprunt.class, Demande.class, Student.class);
     }
 }

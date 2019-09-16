@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Student} from '../models/student';
-import {map} from 'rxjs/operators';
 import {User} from '../models/user';
+import {Student} from '../models/student';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +17,8 @@ export class UserService {
     return this.http.get<User[]>(this.myApiUrl)
   }
 
-  getUser(id: number): Observable<User>{
-    return this.http.get<User>(this.myApiUrl+id)
+  getUser(username: string): Observable<User>{
+    return this.http.get<User>(this.myApiUrl+username)
   }
 
   toggleBlockUser(user: User){

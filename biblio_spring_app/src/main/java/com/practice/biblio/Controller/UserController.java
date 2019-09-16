@@ -28,13 +28,13 @@ public class UserController {
     }
     
     @GetMapping("/appUsers")
-    public List<AppUser> getUsers(){
-        return appUserRepo.findAll();
+    public ResponseEntity<List<AppUser>> getUsers(){
+        return ResponseEntity.ok(appUserRepo.findAll());
     }
     
-    @GetMapping("/appUsers/{id}")
-    public AppUser getUser(@PathVariable("id") long id){
-        return appUserRepo.findById(id).get();
+    @GetMapping("/appUsers/{username}")
+    public AppUser getUser(@PathVariable("username") String username){
+        return appUserRepo.findByUsername(username);
     }
     
 }

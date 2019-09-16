@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Demande} from '../../../models/demande';
+import {BookService} from '../../../services/book.service';
+import {DemandeService} from '../../../services/demande.service';
 
 @Component({
   selector: 'app-use-demande-item',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-demande-item.component.scss']
 })
 export class UserDemandeItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() demande: Demande;
+  constructor(private demandeService: DemandeService,private  bookService: BookService) { }
 
   ngOnInit() {
+    this.loadBook();
+  }
+
+  loadBook(){
+    this.demandeService.getDemandeBook(this.demande.id).subscribe(
+      data => {
+        this.demande.book= data;
+      }
+    )
   }
 
 }

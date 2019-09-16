@@ -20,7 +20,6 @@ public class BookController {
         bookService.save(book, image);
     }
     
-    
     @GetMapping(path = "/books/{id}/getPic", produces = MediaType.IMAGE_JPEG_VALUE)
     @ResponseBody
     public byte[] getPic(@PathVariable("id") Long id) throws Exception{

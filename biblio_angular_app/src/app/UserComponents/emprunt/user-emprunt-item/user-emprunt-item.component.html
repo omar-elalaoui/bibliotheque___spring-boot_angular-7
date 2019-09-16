@@ -1,3 +1,14 @@
-<p>
-  use-emprunt-item works!
-</p>
+<div class="img"><img src="{{bookService.myApiUrl+emprunt.book?.id+'/getPic'}}" height="150px" width="120px"></div>
+<div class="cm_text-right">
+  <h3>{{emprunt.book?.titre}}</h3>
+  <div class="lines">
+    <strong>By: </strong> <span>{{emprunt.book?.auteur}}</span><br>
+    <strong>Edition: </strong> <span>{{emprunt.book?.edition}}</span><br>
+    <strong>Pages: </strong> <span>{{emprunt.book?.pages}}</span><br>
+    <p class="dates">
+      <strong>Date emprunté: </strong> <span>{{emprunt.date_emprunt | date: 'dd/MM/yyyy' }}</span><br>
+      <strong>Date à retourner: </strong> <span>{{emprunt.date_emprunt | date: 'dd/MM/yyyy' }}</span><br>
+    </p>
+  </div>
+</div>
+<hr>

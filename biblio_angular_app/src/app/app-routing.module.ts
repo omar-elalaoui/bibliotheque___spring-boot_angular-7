@@ -19,6 +19,7 @@ import {UserDemandeListComponent} from './UserComponents/demande/user-demande-li
 import {UserEmpruntListComponent} from './UserComponents/emprunt/user-emprunt-list/user-emprunt-list.component';
 import {UserProfileComponent} from './UserComponents/profile/user-profile/user-profile.component';
 import {UserProfileEditComponent} from './UserComponents/profile/user-profile-edit/user-profile-edit.component';
+import {UserResolver} from './_resolvers/user.resolver';
 
 const appRoutes:Routes= [
   {path: 'login', component: LoginComponent},
@@ -35,7 +36,7 @@ const appRoutes:Routes= [
       {path: 'users', component: AdminUserListComponent},
       {path: 'users/:id/profile', component: AdminUserProfileComponent}
     ]},
-  {path: 'userHome', component: UserHomeComponent, children:[
+  {path: 'userHome', component: UserHomeComponent, resolve:{user: UserResolver}, children:[
       {path: '', component: UserBookListComponent},
       {path: 'livres', component: UserBookListComponent},
       {path: 'livres/:id', component: BookDetailsComponent},

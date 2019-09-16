@@ -19,7 +19,7 @@
         </p>
         <div class="footer">
           <button class="btn btn-primary mr-2" routerLink="../../"><i class="fas fa-angle-double-left"></i>  Retour</button>
-<!--          <button class="btn btn-warning"><i class="fas fa-book-reader"></i> Demander d'emprunt</button>-->
+          <button *ngIf="isStudent" (click)="demanderBook()" class="btn btn-warning"><i class="fas fa-book-reader"></i> Demander d'emprunt</button>
         </div>
       </div>
     </div>

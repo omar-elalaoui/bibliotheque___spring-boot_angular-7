@@ -11,21 +11,23 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
   model:any = {};
   isLoading=false;
-  constructor(private auth: AuthService, private alertify: AlertifyService, private router: Router) { }
+  constructor(private authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   login(){
     this.isLoading=true;
-    this.auth.login(this.model).subscribe(next => {
+    this.authService.login(this.model).subscribe(next => {
       this.isLoading=false;
+      const roles: string[]= this.authService.decodedToken.roles;
+      if(roles.includes("ADMIN")){ this.router.navigate(['/adminHome']);}
+      else { this.router.navigate(['/userHome']); }
       this.alertify.success("Connecté avec succès");
-      this.router.navigate(['/adminHome']);
     }, error => {
       this.isLoading=false;
       this.alertify.error("Nom d'utilisateur ou mot de passe incorrect");
     })
   }
   loggedIn(){
-    return this.auth.loggedIn();
+    return this.authService.loggedIn();
   }
   ngOnInit() {
   }

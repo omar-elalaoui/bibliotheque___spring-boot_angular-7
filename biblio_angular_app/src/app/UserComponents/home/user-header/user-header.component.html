@@ -36,12 +36,12 @@
       </div>
     </li>
 
-    <li class="nav-item dropdown no-arrow mx-1">
+    <li class="nav-item dropdown no-arrow mx-1" routerLinkActive="active">
       <a class="nav-link text-secondary" routerLink="/userHome/empruntes">
         <span>Empruntés <span>(1)</span></span>
       </a>
     </li>
-    <li class="nav-item dropdown no-arrow mx-1">
+    <li class="nav-item dropdown no-arrow mx-1" routerLinkActive="active">
       <a class="nav-link text-secondary" routerLink="/userHome/demandes">
         <span>Demandes <span>(1)</span></span>
       </a>
@@ -108,8 +108,8 @@
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow" dropdown>
       <a class="hand_cursor nav-link"  id="userDropdown"  dropdownToggle>
-        <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
-        <img class="img-profile rounded-circle" src="assets/img/admin.png">
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{name}}</span>
+        <img class="img-profile rounded-circle" [src]="imgIcon">
       </a>
       <!-- Dropdown - User Information -->
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
@@ -118,7 +118,7 @@
           Profile
         </a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item hand_cursor">
+        <a class="dropdown-item hand_cursor" (click)="logout()">
           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
           Logout
         </a>

@@ -1,3 +1,6 @@
+import {Demande} from './demande';
+import {Emprunt} from './emprunt';
+
 export class Student {
   id: number;
   prenom: string ;
@@ -7,4 +10,6 @@ export class Student {
   cin :string ;
   cne :number ;
   photo:string;
+  demandeList: Demande;
+  empruntList: Emprunt;
 }

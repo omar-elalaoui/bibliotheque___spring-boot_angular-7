@@ -1,7 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Book} from '../../models/book';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {BookService} from '../../services/book.service';
+import {StudentService} from '../../services/student.service';
+import {Demande} from '../../models/demande';
+import {DemandeService} from '../../services/demande.service';
+import {AlertifyService} from '../../services/alertify.service';
+import {Student} from '../../models/student';
 
 @Component({
   selector: 'app-book-details',
@@ -10,10 +15,13 @@ import {BookService} from '../../services/book.service';
 })
 export class BookDetailsComponent implements OnInit {
   book: Book;
-  constructor(private route: ActivatedRoute, private bookService: BookService) { }
+  isStudent: boolean= false;
+  constructor(private route: ActivatedRoute, private bookService: BookService, private studentService: StudentService,
+              private demandeService: DemandeService,private router: Router, private alertify: AlertifyService) { }
 
   ngOnInit() {
     this.loadBook();
+    if(this.studentService.student){this.isStudent= true;}
   }
 
   loadBook(){
@@ -31,6 +39,21 @@ export class BookDetailsComponent implements OnInit {
       category =>{
         this.book.category= category;}
     )
+  }
+
+  demanderBook(){
+    let demande= new Demande();
+    demande.book= new Book();
+    demande.student= new Student();
+    demande.book.id= this.book.id;
+    demande.student.id= this.studentService.student.id;
+    demande.date_demande= new Date();
+    this.demandeService.demander(demande).subscribe(
+      data =>{
+        this.router.navigate(['/userHome/livres']);
+        this.alertify.success("Votre demande est effectué")},
+      error => {this.alertify.error(error)}
+    );
   }
 
 }

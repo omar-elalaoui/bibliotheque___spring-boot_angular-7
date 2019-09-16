@@ -1,25 +1,26 @@
 package com.practice.biblio.Entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class AppUser {
+public class Emprunt {
     @Id
     @GeneratedValue
     private long id;
-    @Column(unique = true)
-    private String username;
-    private String password;
-    private boolean actived;
-    @ManyToMany(fetch = FetchType.EAGER)
-    private List<AppRole> roleList;
-    @OneToOne(cascade = CascadeType.ALL)
+    @CreatedDate
+    private Date date_emprunt;
+    private int duree_emprunt;
+    private boolean isReturned;
+    @ManyToOne
+    private Book book;
+    @ManyToOne
     private Student student;
 }

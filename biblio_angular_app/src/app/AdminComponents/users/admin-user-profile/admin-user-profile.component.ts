@@ -17,8 +17,8 @@ export class AdminUserProfileComponent implements OnInit {
     this.loadUser(id);
   }
 
-  loadUser(id: number){
-    this.userService.getUser(id).subscribe(data => {this.user= data;})
+  loadUser(username: string){
+    this.userService.getUser(username).subscribe(data => {this.user= data;})
   }
 
 }

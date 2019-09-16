@@ -1,3 +1,12 @@
-<p>
-  use-demande-item works!
-</p>
+
+<div class="img"><img src="{{bookService.myApiUrl+demande.book?.id+'/getPic'}}" height="150px" width="120px"></div>
+<div class="cm_text-right">
+  <h3>{{demande.book?.titre}}</h3>
+  <p class="lines">
+    <strong>By: </strong> <span>{{demande.book?.auteur}}</span><br>
+    <strong>Edition: </strong> <span>{{demande.book?.edition}}</span><br>
+    <strong>Pages: </strong> <span>{{demande.book?.pages}}</span><br>
+    <button class="btn-xs annuler btn btn-danger btn-sm"><i class="fas fa-times"></i> Annuler la demande</button>
+  </p>
+</div>
+<hr>
